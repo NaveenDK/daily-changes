@@ -15,25 +15,47 @@
 
 // Setup
 // Example
-var ourDog = {
-  "name": "Camper",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["everything!"]
-};
+// var ourDog = {
+//   "name": "Camper",
+//   "legs": 4,
+//   "tails": 1,
+//   "friends": ["everything!"]
+// };
 
-ourDog.name = "Happy Camper";
+// ourDog.name = "Happy Camper";
 
-// Setup
-var myDog = {
-  "name": "Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"]
-};
+// // Setup
+// var myDog = {
+//   "name": "Coder",
+//   "legs": 4,
+//   "tails": 1,
+//   "friends": ["freeCodeCamp Campers"]
+// };
 
-// Only change code below this line.
+// // Only change code below this line.
 
-myDog["name"]="Happy Coder";
+// myDog["name"]="Happy Coder";
 
-console.log(myDog);
+// console.log(myDog);
+  // Setup
+function phoneticLookup(val) {
+  var result = "";
+
+  // Only change code below this line
+ var lookup={
+  "alpha":"Adams",
+  "bravo":"Boston",
+  "charlie":"Chicago",
+  "delta":"Denver",
+  "echo":"Easy",
+  "foxtrot":"Frank"
+ }
+
+  result=lookup[val];
+
+  // Only change code above this line
+  return result;
+}
+
+// Change this value to test
+phoneticLookup("charlie");
