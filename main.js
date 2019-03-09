@@ -24,6 +24,7 @@ var collection = {
     }
 };
 
+console.log(collection);
 
 var collectionCopy = JSON.parse(JSON.stringify(collection));
 
@@ -32,14 +33,48 @@ function updateRecords(id, prop, value) {
     if(value == ""){
       delete collection.id["prop"];
     }
+    else if ( prop =="tracks" && value != "")
+    {
+    collection["id"]["prop"].push(value);
+    }
     
       
       return collection;
     }
-    
     // Alter values below to test your code
-    updateRecords(5439, "artist", "ABBA");
-    
+    updateRecords(5439, "", "ABBA");
+    updateRecords(5439, "tracks", "gabba");
+
+
+
+    console.log("after -------------------------'\'<br>\n\n" , collection);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const companies= [
 //     {name: "Company One", category: "Finance", start: 1981, end: 2004},
 //     {name: "Company Two", category: "Retail", start: 1992, end: 2008},
