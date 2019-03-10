@@ -182,26 +182,26 @@ var collectionCopy = JSON.parse(JSON.stringify(collection));
 
 // Only change code below this line
 function updateRecords(id, prop, value) {
+  if(!value){
+    delete collection[id][prop];
+    return collection;
+  }
+  
+  if(prop !== "tracks"){
+    collection[id][prop] = value;
+  }
+  else{
+    if (!collection[id].hasOwnProperty("tracks")) collection[id].tracks =[];
 
-    if(!value){
-      delete collection[id][prop];
-      return collection;
-    }
+    collection[id].tracks.push(value);
+  }
 
-    if(prop !== "tracks" && value){
-      collection[id][prop] = value; //can create artist prop of 5439 just like that 
-    }
-    else if (!collection[id].hasOwnProperty("tracks")){ collection[id].tracks =[]; 
-      //var arrTrack=[value];
-      collection[id].tracks.push(value);
-
-    }
-    
-return collection;
+  return collection;
 }
 
 // Alter values below to test your code
 updateRecords(5439, "artist", "ABBA");
 updateRecords(5439,"tracks","track1");
+updateRecords(1245, "tracks", "Addicted to Love");
 //updateRecords(2548,"artist","");
 console.log(collection)
