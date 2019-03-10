@@ -83,28 +83,44 @@
 // console.log('checkObj("gift")');
 
 // Setup
-var myObj = {
-  gift: "pony",
-  pet: "kitten",
-  bed: "sleigh"
+// var myObj = {
+//   gift: "pony",
+//   pet: "kitten",
+//   bed: "sleigh"
+// };
+
+// function checkObj(checkProp) {
+//   // Your Code Here
+//   switch(checkProp){
+//     case "gift":
+//     return "pony";
+//     break;
+//     case "pet":
+//     return "kitten";
+//     case "bed":
+//     return "sleigh";
+//     default:
+//     return "Not Found";
+//   }
+
+// }
+
+// // Test your code by modifying these values
+// checkObj("gift");
+// console.log(checkObj("gift"));//works!
+
+// Setup
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
 };
 
-function checkObj(checkProp) {
-  // Your Code Here
-  switch(checkProp){
-    case "gift":
-    return "pony";
-    break;
-    case "pet":
-    return "kitten";
-    case "bed":
-    return "sleigh";
-    default:
-    return "Not Found";
-  }
-
-}
-
-// Test your code by modifying these values
-checkObj("gift");
-console.log(checkObj("gift"));
+var gloveBoxContents = myStorage.car.inside["glove box"]; // Change this line
+console.log(gloveBoxContents); //works!
