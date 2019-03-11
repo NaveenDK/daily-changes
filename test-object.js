@@ -4,9 +4,9 @@
 //     16: "Montana",
 //     19: "Unitas"
 //   };
-  
+
 //   // Only change code below this line;
-  
+
 //   var playerNumber = 16;       // Change this Line
 //   var player = testObj[playerNumber]   // Change this Line
 
@@ -73,7 +73,7 @@
 //   if( myObj.hasOwnProperty(checkProp)=="pet")
 //   return "kitten";
 //   if(myObj.hasOwnProperty(checkProp)=="sleigh")
-//   return "sleigh"; 
+//   return "sleigh";
 
 // }
 
@@ -127,7 +127,7 @@
 
 // Setup
 // var myPlants = [
-//   { 
+//   {
 //     type: "flowers",
 //     list: [
 //       "rose",
@@ -142,7 +142,7 @@
 //       "pine",
 //       "birch"
 //     ]
-//   }  
+//   }
 // ];
 
 // // Only change code below this line
@@ -156,17 +156,17 @@
 //   "2548": {
 //     "album": "Slippery When Wet",
 //     "artist": "Bon Jovi",
-//     "tracks": [ 
-//       "Let It Rock", 
-//       "You Give Love a Bad Name" 
+//     "tracks": [
+//       "Let It Rock",
+//       "You Give Love a Bad Name"
 //     ]
 //   },
 //   "2468": {
 //     "album": "1999",
 //     "artist": "Prince",
-//     "tracks": [ 
-//       "1999", 
-//       "Little Red Corvette" 
+//     "tracks": [
+//       "1999",
+//       "Little Red Corvette"
 //     ]
 //   },
 //   "1245": {
@@ -186,7 +186,7 @@
 //     delete collection[id][prop];
 //     return collection;
 //   }
-  
+
 //   if(prop !== "tracks"){
 //     collection[id][prop] = value;
 //   }
@@ -207,20 +207,49 @@
 // console.log(collection)
 
 // Example
-var ourArr = [ 9, 10, 11, 12];
-var ourTotal = 0;
+// var ourArr = [ 9, 10, 11, 12];
+// var ourTotal = 0;
 
-for (var i = 0; i < ourArr.length; i++) {
-  ourTotal += ourArr[i];
-}
+// for (var i = 0; i < ourArr.length; i++) {
+//   ourTotal += ourArr[i];
+// }
 
-// Setup
-var myArr = [ 2, 3, 4, 5, 6];
+// // Setup
+// var myArr = [ 2, 3, 4, 5, 6];
 
-// Only change code below this line
-var total=0;
-for( var i = 0; i<=(myArr.length-1); i++ ){
-   total += myArr[i];
-}
+// // Only change code below this line
+// var total=0;
+// for( var i = 0; i<=(myArr.length-1); i++ ){
+//    total += myArr[i];
+// }
 
-console.log(total);
+// console.log(total);
+
+var orders = [
+  {
+    amount:250
+  },
+  {
+    amount:400
+  },
+  {
+    amount:100
+  },
+  {
+    amount:325
+  },
+]
+
+// var totalAmount = orders.reduce(function(sum,order){
+
+//   return sum + order.amount
+
+// },0)
+
+// var totalAmount = orders.reduce(function(sum,order){
+
+//   return sum + order.amount
+
+// },0)
+
+var totalAmount = orders.reduce( (sum,order)=> sum + order.amount,0)
