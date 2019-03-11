@@ -225,20 +225,20 @@
 
 // console.log(total);
 
-var orders = [
-  {
-    amount:250
-  },
-  {
-    amount:400
-  },
-  {
-    amount:100
-  },
-  {
-    amount:325
-  },
-]
+// var orders = [
+//   {
+//     amount:250
+//   },
+//   {
+//     amount:400
+//   },
+//   {
+//     amount:100
+//   },
+//   {
+//     amount:325
+//   },
+// ]
 
 // var totalAmount = orders.reduce(function(sum,order){
 
@@ -252,4 +252,20 @@ var orders = [
 
 // },0)
 
-var totalAmount = orders.reduce( (sum,order)=> sum + order.amount,0)
+//var totalAmount = orders.reduce( (sum,order)=> sum + order.amount,0)
+
+function multiplyAll(arr) {
+  var product = 1;
+  // Only change code below this line
+  for(var i=0; i< arr.length;i++){
+    for(var k =0; k <arr[i].length; k++) {
+        product = product*arr[i][k];
+        console.log(product , '\n');
+    }
+  }
+  // Only change code avarbove this line
+  return product;
+}
+
+// Modify values below to test your code
+multiplyAll([[1,2],[3,4],[5,6,7]]);
